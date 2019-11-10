@@ -55,6 +55,14 @@ class App extends React.Component {
     });
     // Update health
     this.setState({health: this.state.health - 5});
+
+    if(this.state.score < 350 || this.state.health <= 0) {
+      Intro.lose();
+    }
+    if(this.state.balance > 50000) {
+      Intro.win();
+    }
+
   }
 
   /**
