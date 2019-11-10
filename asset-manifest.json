@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1359359f.chunk.css",
-    "main.js": "/static/js/main.1a8c1d12.chunk.js",
-    "main.js.map": "/static/js/main.1a8c1d12.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e05837b8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e05837b8.js.map",
-    "static/js/2.8c5ed23b.chunk.js": "/static/js/2.8c5ed23b.chunk.js",
-    "static/js/2.8c5ed23b.chunk.js.map": "/static/js/2.8c5ed23b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.2278cfe99777920790c1fa1c4c285f1f.js": "/precache-manifest.2278cfe99777920790c1fa1c4c285f1f.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.1359359f.chunk.css.map": "/static/css/main.1359359f.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.25bf045c.svg"
+    "main.css": "/college-entrepreneur/static/css/main.1359359f.chunk.css",
+    "main.js": "/college-entrepreneur/static/js/main.569feef7.chunk.js",
+    "main.js.map": "/college-entrepreneur/static/js/main.569feef7.chunk.js.map",
+    "runtime-main.js": "/college-entrepreneur/static/js/runtime-main.8bc3fb85.js",
+    "runtime-main.js.map": "/college-entrepreneur/static/js/runtime-main.8bc3fb85.js.map",
+    "static/js/2.8c5ed23b.chunk.js": "/college-entrepreneur/static/js/2.8c5ed23b.chunk.js",
+    "static/js/2.8c5ed23b.chunk.js.map": "/college-entrepreneur/static/js/2.8c5ed23b.chunk.js.map",
+    "index.html": "/college-entrepreneur/index.html",
+    "precache-manifest.b8aaddd9cf958be59b912bd0b77b9d35.js": "/college-entrepreneur/precache-manifest.b8aaddd9cf958be59b912bd0b77b9d35.js",
+    "service-worker.js": "/college-entrepreneur/service-worker.js",
+    "static/css/main.1359359f.chunk.css.map": "/college-entrepreneur/static/css/main.1359359f.chunk.css.map",
+    "static/media/logo.svg": "/college-entrepreneur/static/media/logo.25bf045c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e05837b8.js",
+    "static/js/runtime-main.8bc3fb85.js",
     "static/js/2.8c5ed23b.chunk.js",
     "static/css/main.1359359f.chunk.css",
-    "static/js/main.1a8c1d12.chunk.js"
+    "static/js/main.569feef7.chunk.js"
   ]
 }
