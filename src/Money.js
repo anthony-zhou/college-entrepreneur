@@ -9,13 +9,13 @@ class Money extends React.Component {
    */
   debts() {
     return this.props.debts.map((debt, index) => {
-      const {description, cost, tenYearAnnuityPayment} = debt;
+      const {description, cost, monthlyPayment} = debt;
       var date = new Date(debt.year, debt.month);
       return (
         <tr key={index} className="table-active">
           <th scope="row">{description}</th>
           <th>${parseFloat(cost * 100 / 100).toFixed(2)}</th>
-          <th>${parseFloat(tenYearAnnuityPayment).toFixed(2)}</th>
+          <th>${parseFloat(monthlyPayment).toFixed(2)}</th>
           <th>{date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear()}</th>
           <th><button onClick={() => this.pay(debt)} type="button" className="btn btn-info">Pay</button></th>
         </tr>
@@ -60,7 +60,7 @@ class Money extends React.Component {
                 <th scope="col">Description</th>
                 <th scope="col">Total</th>
                 <th scope="col">Monthly amount</th>
-                <th scope="col">Date</th>
+                <th scope="col">Due</th>
               </tr>
             </thead>
             <tbody>
