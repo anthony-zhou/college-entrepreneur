@@ -1,4 +1,5 @@
 import React from 'react';
+import './Student.css';
 
 /**
  * Stores the health of the student.
@@ -28,7 +29,7 @@ class Student extends React.Component {
   render() {
     return (
       <div className="progress">
-        <div className={this.type()} role="progressbar" style={{width: this.props.health + "%"}}></div>
+        <div className={this.type()} role="progressbar" style={{width: this.props.health + "%"}}>Health</div>
       </div>
     );
   }

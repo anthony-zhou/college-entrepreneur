@@ -77,12 +77,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div id="content">
         <Student health={this.state.health}/>
         <Money parent={this} income={this.state.income} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
         <World />
-        <button onClick={() => this.advance()} type="button" className="btn btn-info">Next</button>
-        <button onClick={() => this.invest()} type="button" className="btn btn-info">Invest (${this.state.income * 10})</button>
+        <div id="buttons">
+          <button onClick={() => this.advance()} type="button" className="btn btn-info">Next</button>
+            &nbsp;&nbsp;
+          <button onClick={() => this.invest()} type="button" className="btn btn-info">Invest (${this.state.income * 10})</button>
+        </div>
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Money.css';
 
 /**
  * Stores the balance, credit score, and outstanding debts.
@@ -30,7 +31,6 @@ class Money extends React.Component {
       this.props.debts.splice(this.props.debts.indexOf(debt), 1);
       this.props.parent.setState({balance: this.props.balance - debt.cost});
       if (debt.year >= this.props.parent.state.year && debt.month >= this.props.parent.state.month) {
-        console.log(debt.year + ' ' + debt.month + '/' + this.props.parent.state.year + ' ' + this.props.parent.state.month)
         this.props.parent.setState({score: this.props.score + 10});
       }
     }
@@ -38,22 +38,22 @@ class Money extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="jumbotron">
+      <section>
+        <article id="balance" className="jumbotron">
           <h2>{this.props.date}</h2>
           <h1 className="display-3">${parseFloat(this.props.balance * 100 / 100).toFixed(2)}</h1>
           <h2>Max Income Per Month</h2>
           <h1 className="display-3">${this.props.income}</h1>
-        </div>
-        <div className="jumbotron">
+        </article>
+        <article id="credit" className="jumbotron">
           <h2>Credit Score</h2>
           <h1 className="display-3">{this.props.score}</h1>
           <h2>Max Credit Per Month</h2>
           <h1 className="display-3">{parseFloat(this.props.balance / 2 * this.props.score / 1000).toFixed(2)}</h1>
-        </div>
-        <div className="jumbotron">
+        </article>
+        <article id="debt" className="jumbotron">
           <h2>Outstanding Debts</h2>
-          <table>
+          <table cellPadding="10">
             <thead>
               <tr>
                 <th scope="col">Description</th>
@@ -65,8 +65,8 @@ class Money extends React.Component {
               {this.debts()}
             </tbody>
           </table>
-        </div>
-      </div>
+        </article>
+      </section>
     );
   }
 }

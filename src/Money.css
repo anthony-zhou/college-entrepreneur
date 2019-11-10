@@ -1,0 +1,10 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jumbotron {
+    margin: 10px;
+    min-height: 500px;
+}
