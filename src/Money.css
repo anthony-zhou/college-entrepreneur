@@ -7,4 +7,9 @@ section {
 .jumbotron {
     margin: 10px;
     min-height: 500px;
+    background-color: #E6E0CF;
+}
+
+.td {
+    background-color: #E6E0CF;
 }

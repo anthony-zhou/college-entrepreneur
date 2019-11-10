@@ -11,15 +11,16 @@ import { generateKeyPairSync } from 'crypto';
 
 const APR = 1.01;
 const GRACE = 3;
+const COLOR = '#F0E9D8'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     var today = new Date();
-    this.state = {balance: 0, income: 5000, score: 500, debts: [new LongTermDebt("Student Loans", 60000, today.getMonth(), today.getFullYear())],
+    this.state = {balance: 0, income: 5000, score: 500, debts: [new LongTermDebt("Student Loans", 60000, today.getFullYear() + 10, today.getMonth())],
                   month: today.getMonth(), year: today.getFullYear(),
                   health: 100};
-    this.money = new Money();
+    document.body.style = 'background: ' + COLOR;
   }
 
   /**

@@ -1,6 +1,20 @@
 import React from 'react';
 import Event from './Event'
-const eventItems = ["PhoneMe Ultimate Extra OLED S Max", "SingingSam Galaxy Foldable", "Democratic Republic of Gamers 240hz Monitor", "Lazer LifeAdder Gaming Mouse", "Most Overpriced keyboard, the one and only HHKB keyboard", "very nice mug", "very nice fountain pen", "sketchy adapter", "avacado toast", "AlienWear Smart Laptop with Alexo Included", "Saturn V Lego Set", "amazing pikachonk plushie"];
+
+const eventItems = [
+					"PhoneMe Ultimate Extra OLED S Max",
+					"SingingSam Galaxy Foldable",
+					"Democratic Republic of Gamers 240hz Monitor",
+					"Lazer LifeAdder Gaming Mouse",
+					"Most Overpriced keyboard, the one and only HHKB keyboard",
+					"very nice mug",
+					"very nice fountain pen",
+					"sketchy adapter",
+					"avacado toast",
+					"AlienWear Smart Laptop with Alexo Included",
+					"Saturn V Lego Set",
+					"amazing pikachonk plushie",
+				   ];
 
 class RandomEvent {
 	constructor(){
@@ -25,7 +39,7 @@ class RandomEvent {
 		if(randomIndex == eventItems.length){
 			randomIndex -= 1;
 		}
-		return "You want to purchase the " + eventItems[randomIndex] + " and it will cost " + this.cost;
+		return "You want to purchase the " + eventItems[randomIndex] + " for $" + this.cost + "?";
 	}
 
 	static pullValue(){

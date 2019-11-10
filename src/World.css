@@ -3,3 +3,11 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+.modal-lg {
+    min-width: 1320px;
+}
+
+.modal-content {
+    background-color: #E6E0CF;
+}
