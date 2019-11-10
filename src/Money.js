@@ -10,12 +10,13 @@ class Money extends React.Component {
    */
   debts() {
     return this.props.debts.map((debt, index) => {
-      const {description, cost} = debt;
+      const {description, cost, monthlyPayment} = debt;
       var date = new Date(debt.year, debt.month);
       return (
-        <tr className="table-active">
+        <tr key={index} className="table-active">
           <th scope="row">{description}</th>
           <th>${parseFloat(cost * 100 / 100).toFixed(2)}</th>
+          <th>${parseFloat(monthlyPayment).toFixed(2)}</th>
           <th>{date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear()}</th>
           <th><button onClick={() => this.pay(debt)} type="button" className="btn btn-info">Pay</button></th>
         </tr>
@@ -27,12 +28,18 @@ class Money extends React.Component {
    * Pay off a debt.
    */
   pay(debt) {
-    if (this.props.balance >= debt.cost) {
-      this.props.debts.splice(this.props.debts.indexOf(debt), 1);
-      this.props.parent.setState({balance: this.props.balance - debt.cost});
+    console.log(this.props.balance);
+    if (this.props.balance >= debt.monthlyPayment) {
+      this.props.parent.setState({balance: this.props.balance - debt.monthlyPayment});
+      debt.cost -= debt.monthlyPayment;
+      if(debt.cost === 0) {
+        this.props.debts.splice(this.props.debts.indexOf(debt), 1);
+      }
       if (debt.year >= this.props.parent.state.year && debt.month >= this.props.parent.state.month) {
         this.props.parent.setState({score: this.props.score + 10});
       }
+    } else {
+      //TODO: implement alert telling user they don't have enough money to pay the debt
     }
   }
 
@@ -57,7 +64,8 @@ class Money extends React.Component {
             <thead>
               <tr>
                 <th scope="col">Description</th>
-                <th scope="col">Amount</th>
+                <th scope="col">Total</th>
+                <th scope="col">Monthly amount</th>
                 <th scope="col">Due</th>
               </tr>
             </thead>

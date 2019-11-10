@@ -4,6 +4,7 @@ class Debt {
     this.cost = cost;
     this.year = year;
     this.month = month;
+    this.monthlyPayment = cost;
   }
 }
 

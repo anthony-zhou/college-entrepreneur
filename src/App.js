@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import "bootswatch/dist/sketchy/bootstrap.min.css"; 
+import "./bootstrap.min.css";
 import './App.css';
 import Money from './Money.js';
 import Student from './Student.js';
 import World from './World.js';
 import Debt from './Debt.js';
+import LongTermDebt from './LongTermDebt.js';
 import { generateKeyPairSync } from 'crypto';
 
 const APR = 1.01;
@@ -15,7 +16,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     var today = new Date();
-    this.state = {balance: 0, income: 1000, score: 500, debts: [],
+    this.state = {balance: 0, income: 5000, score: 500, debts: [new LongTermDebt("Student Loans", 60000, today.getMonth(), today.getFullYear())],
                   month: today.getMonth(), year: today.getFullYear(),
                   health: 100};
     this.money = new Money();
@@ -43,6 +44,9 @@ class App extends React.Component {
         debt.cost *= APR;
         // Subtract credit
         this.setState({score: this.state.score - 10});
+        if(LongTermDebt.prototype.isPrototypeOf(debt)) {
+          debt.monthlyPayment = ((APR-1) * debt.cost) / (1 - Math.pow(APR, -12));
+        }
       }
     });
     // Update health
