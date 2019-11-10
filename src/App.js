@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import "bootswatch/dist/sketchy/bootstrap.min.css"; 
+import "./bootstrap.min.css";
 import './App.css';
 import Money from './Money.js';
 import Student from './Student.js';
@@ -15,7 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     var today = new Date();
-    this.state = {balance: 0, income: 1000, score: 500, debts: [],
+    this.state = {balance: 0, income: 1000, score: 500, debts: [new Debt("Student Loans", 60000, today.getMonth(), today.getFullYear())],
                   month: today.getMonth(), year: today.getFullYear(),
                   health: 100};
     this.money = new Money();
