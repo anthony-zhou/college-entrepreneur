@@ -1,6 +1,8 @@
 import React from 'react';
 import './Money.css';
 
+const COLOR = "#E6E0CF";
+
 /**
  * Stores the balance, credit score, and outstanding debts.
  */
@@ -14,11 +16,11 @@ class Money extends React.Component {
       var date = new Date(debt.year, debt.month);
       return (
         <tr key={index} className="table-active">
-          <th scope="row">{description}</th>
-          <th>${parseFloat(cost * 100 / 100).toFixed(2)}</th>
-          <th>${parseFloat(monthlyPayment).toFixed(2)}</th>
-          <th>{date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear()}</th>
-          <th><button onClick={() => this.pay(debt)} type="button" className="btn btn-info">Pay</button></th>
+          <th style={{backgroundColor: COLOR}} scope="row">{description}</th>
+          <th style={{backgroundColor: COLOR}}>${parseFloat(cost * 100 / 100).toFixed(2)}</th>
+          <th style={{backgroundColor: COLOR}}>${parseFloat(monthlyPayment).toFixed(2)}</th>
+          <th style={{backgroundColor: COLOR}}>{date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear()}</th>
+          <th style={{backgroundColor: COLOR}}><button onClick={() => this.pay(debt)} type="button" className="btn btn-info">Pay</button></th>
         </tr>
       )
     });
@@ -59,13 +61,13 @@ class Money extends React.Component {
         </article>
         <article id="debt" className="jumbotron">
           <h2>Outstanding Debts</h2>
-          <table cellPadding="10">
+          <table className="table-striped" cellPadding="10">
             <thead>
               <tr>
-                <th scope="col">Description</th>
-                <th scope="col">Total</th>
-                <th scope="col">Monthly amount</th>
-                <th scope="col">Due</th>
+                <th style={{backgroundColor: COLOR}} scope="col">Description</th>
+                <th style={{backgroundColor: COLOR}} scope="col">Total</th>
+                <th style={{backgroundColor: COLOR}} scope="col">Monthly amount</th>
+                <th style={{backgroundColor: COLOR}} scope="col">Due</th>
               </tr>
             </thead>
             <tbody>

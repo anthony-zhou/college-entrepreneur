@@ -10,18 +10,17 @@ class World extends React.Component {
   render() {
     var e = RandomEvent.generate();
     return (
-  <div className="modal-dialog" role="document" mw-100 w-50>
-    <div className="modal-content">
-      <div className="modal-body">
-        <h2>{e.description}</h2>
-        <p>{e.cost}</p>
+      <div className="modal-dialog modal-lg" role="document">
+        <div className="modal-content">
+          <div className="modal-body">
+            <h2>{e.description}</h2>
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-primary btn-danger" data-dismiss="modal">No</button>
+            <button type="button" className="btn btn-primary btn-success">Yes</button>
+        </div>
       </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-primary btn-success">Yes</button>
-        <button type="button" className="btn btn-primary btn-danger" data-dismiss="modal">No</button>
     </div>
-  </div>
-</div>
     );
   }
 }
