@@ -1,6 +1,12 @@
 import React from 'react';
 
+/**
+ * Stores the health of the student.
+ */
 class Student extends React.Component {
+  /**
+   * Dynamically change color of progress bar based on current health.
+   */
   type() {
     var type;
     var percent = this.props.health;

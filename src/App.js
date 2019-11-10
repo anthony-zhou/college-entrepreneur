@@ -5,14 +5,16 @@ import './App.css';
 import Money from './Money.js';
 import Student from './Student.js';
 import World from './World.js';
+import Debt from './Debt.js';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     var today = new Date();
-    this.state = {balance: 0, income: 1000, score: 500,
+    this.state = {balance: 0, income: 1000, score: 500, debts: [],
                   month: today.getMonth(), year: today.getFullYear(),
                   health: 100};
+    this.money = new Money();
   }
 
   /**
@@ -34,6 +36,21 @@ class App extends React.Component {
     this.setState({health: this.state.health - 5});
   }
 
+  /**
+   * Invest in the business.
+   */
+  invest() {
+    var cost = this.state.income * 10;
+    // Check if max credit per turn won't be exceeded
+    if (cost - this.state.balance <= this.state.balance / 2 * this.state.score / 1000) {
+      this.setState({debts: [...this.state.debts, new Debt('Business investment', cost)]});
+      this.setState({income: this.state.income * 2});
+    }
+  }
+
+  /**
+   * Get a text representation of the month and year.
+   */
   date() {
     var date = new Date(this.state.year, this.state.month);
     return date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear();
@@ -43,9 +60,10 @@ class App extends React.Component {
     return (
       <div>
         <Student health={this.state.health}/>
-        <Money balance={this.state.balance} score={this.state.score} date={this.date()}/>
+        <Money parent={this} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
         <World />
         <button onClick={() => this.advance()} type="button" className="btn btn-info">Next</button>
+        <button onClick={() => this.invest()} type="button" className="btn btn-info">Invest (${this.state.income * 10})</button>
       </div>
     );
   }
