@@ -1,26 +1,21 @@
-class Student {
-  constructor() {
-    this.creditScore = 700;
-    this.accountBalance = 0;
-    this.semesterTuitionRate = 8500;
-    this.studentLoan = -8500;
-    this.APR = 0.05;
-    this.SLIRate = 0.01;
+import React from 'react';
+
+class Student extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {health: "100%"};
   }
-  addMoney(val){
-    this.accountBalance += val;
-    if(this.accountBalance < 0){
-      this.creditScore -= 10;
-    }
+
+  type() {
+    return "progress-bar progress-bar-striped progress-bar-animated " + "bg-success";
   }
-  payLoan(val){
-    this.studentLoan += val;
-    this.accountBalance -= val;
-  }
-  checkMonth(val){
-    if(val % 12 == 0){
-      //TODO: Add this later
-    }
+  
+  render() {
+    return (
+      <div className="progress">
+        <div className={this.type()} role="progressbar" style={{width: this.state.health}}></div>
+      </div>
+    );
   }
 }
 

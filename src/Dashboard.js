@@ -9,8 +9,12 @@ import World from "./World";
 class Dashboard extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {classes: props.classes, student: props.student};
+    var today = new Date();
+    var monthYear = today.toLocaleString('default', {month: 'long'});
+    monthYear += ' ' + today.getFullYear();
+    this.state = {classes: props.classes, student: props.student, date: monthYear};
   }
+
   render() {
     return (
     <div className="App">
@@ -27,7 +31,7 @@ class Dashboard extends React.Component {
           </Grid>
           <Grid item xs>
             <Paper className={`paper ${ this.state.classes.paper }`}>
-              Date:
+              Date: {this.state.date}
               <World event="test"></World>
               <Button variant="contained" color="primary">Next Month</Button>
             </Paper>

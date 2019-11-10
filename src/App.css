@@ -20,16 +20,3 @@
 .App-link {
   color: #09d3ac;
 }
-
-.container {
-  width: 80%;
-  margin: auto;
-  flex-grow: 1;
-}
-
-.paper p {
-  font-size: 2em;
-}
-.makeStyles-feed-4 {
-  grid-column: span 3;
-}

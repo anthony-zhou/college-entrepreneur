@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+
 class World extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {event: props.event};
-  }
-
-  componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    var random = Math.random();
   }
 
   render() {
     return (
-      <div>
-        {this.state.event}
+  <div className="modal-dialog" role="document">
+    <div className="modal-content">
+      <div className="modal-body">
+        <h1>Event</h1>
       </div>
+      <div className="modal-footer">
+        <button type="button" className="btn btn-primary btn-success">Yes</button>
+        <button type="button" className="btn btn-primary btn-danger" data-dismiss="modal">No</button>
+    </div>
+  </div>
+</div>
     );
   }
 }
