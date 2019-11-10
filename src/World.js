@@ -1,7 +1,8 @@
+import React, { Component } from 'react';
 class World extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {event: ""};
+    this.state = {event: props.event};
   }
 
   componentDidMount() {

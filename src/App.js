@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
   const student = new Student();
-  const world = new World();
+  //const world = new World();
   return (
     <div className="App">
       <div>
@@ -42,6 +42,11 @@ function App() {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.paper}>Yearly Tuition Rate: {student.yearlyTuitionRate}</Paper>
+          </Grid>
+          <Grid item>
+            <Paper>
+              <World event="test"></World>
+            </Paper>
           </Grid>
         </Grid>
       </div>
