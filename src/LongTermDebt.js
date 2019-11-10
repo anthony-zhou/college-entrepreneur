@@ -1,3 +1,4 @@
+import Debt from './Debt'
 const RATE = 0.02;
 
 class LongTermDebt extends Debt {
