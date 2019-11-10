@@ -6,6 +6,7 @@ import Paper from '@material-ui/core/Paper';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from './logo.svg';
 import './App.css';
+import Student from "./Student";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -24,15 +25,6 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2, 0),
   },
 }));
-
-class Student {
-  constructor() {
-    this.creditScore = 700;
-    this.accountBalance = 0;
-    this.yearlyTuitionRate = 17000;
-  }
-
-}
 
 function App() {
   const classes = useStyles();
