@@ -20,10 +20,16 @@ code {
   top: 0;
   left: 0;
   background-color: white;
-  text-align: center;
   padding-top: 10%;
   opacity: 1;
   transition: 0.5s;
+}
+.fullscreen h1 {
+  text-align: center;
+}
+.fullscreen p, .fullscreen ul {
+  width: 50%;
+  margin: auto;
 }
 .visible {
   opacity: 1;
@@ -32,4 +38,7 @@ code {
 .hidden {
   opacity: 0;
   z-index: -1;
+}
+.leftAlign {
+  text-align: left;
 }

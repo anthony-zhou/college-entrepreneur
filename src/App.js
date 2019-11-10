@@ -47,10 +47,10 @@ class App extends React.Component {
 
         if(LongTermDebt.prototype.isPrototypeOf(debt)) {
           debt.monthlyPayment = ((APR-1) * debt.cost) / (1 - Math.pow(APR, -12));
-        } else {
+        }
           // Subtract credit
           this.setState({score: this.state.score - 10});
-        }
+        
       }
     });
     // Update health
