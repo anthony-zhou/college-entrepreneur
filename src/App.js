@@ -7,6 +7,7 @@ import Student from './Student.js';
 import World from './World.js';
 import Debt from './Debt.js';
 import LongTermDebt from './LongTermDebt.js';
+import Intro from './Intro.js';
 import { generateKeyPairSync } from 'crypto';
 
 const APR = 1.01;
@@ -84,6 +85,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="content">
+        <Intro></Intro>
         <Student health={this.state.health}/>
         <Money parent={this} income={this.state.income} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
         <World />
