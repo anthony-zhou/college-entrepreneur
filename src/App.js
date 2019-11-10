@@ -6,6 +6,7 @@ import Money from './Money.js';
 import Student from './Student.js';
 import World from './World.js';
 import Debt from './Debt.js';
+import LongTermDebt from './LongTermDebt.js';
 import { generateKeyPairSync } from 'crypto';
 
 const APR = 1.01;
