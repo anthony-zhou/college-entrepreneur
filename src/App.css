@@ -24,6 +24,12 @@
 .container {
   width: 80%;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  flex-grow: 1;
+}
+
+.paper p {
+  font-size: 2em;
+}
+.makeStyles-feed-4 {
+  grid-column: span 3;
 }
