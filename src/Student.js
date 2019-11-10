@@ -10,12 +10,17 @@ class Student {
   addMoney(val){
     this.accountBalance += val;
     if(this.accountBalance < 0){
-      creditScore -= 10;
+      this.creditScore -= 10;
     }
   }
   payLoan(val){
     this.studentLoan += val;
     this.accountBalance -= val;
+  }
+  checkMonth(val){
+    if(val % 12 == 0){
+      //TODO: Add this later
+    }
   }
 }
 
