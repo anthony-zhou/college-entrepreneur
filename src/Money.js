@@ -12,7 +12,7 @@ class Money extends React.Component {
       const {description, cost} = debt;
       var date = new Date(debt.year, debt.month);
       return (
-        <tr className="table-active">
+        <tr key={index} className="table-active">
           <th scope="row">{description}</th>
           <th>${parseFloat(cost * 100 / 100).toFixed(2)}</th>
           <th>{date.toLocaleString('default', {month: 'long'}) + ' ' + date.getFullYear()}</th>
