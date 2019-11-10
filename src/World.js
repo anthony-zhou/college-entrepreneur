@@ -1,4 +1,5 @@
 import React from 'react';
+import RandomEvent from './RandomEvent';
 
 class World extends React.Component {
   constructor(props) {
@@ -6,11 +7,13 @@ class World extends React.Component {
   }
 
   render() {
+    var e = RandomEvent.generate();
     return (
   <div className="modal-dialog" role="document">
     <div className="modal-content">
       <div className="modal-body">
-        <h1>Event</h1>
+        <h2>{e.description}</h2>
+        <p>{e.cost}</p>
       </div>
       <div className="modal-footer">
         <button type="button" className="btn btn-primary btn-success">Yes</button>

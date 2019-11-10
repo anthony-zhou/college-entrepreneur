@@ -1,4 +1,4 @@
-class Event extends React.Component {
+class Event {
 	constructor(description, valYes, valNo, cost){
 		this.description = description;
 		this.valYes = valYes;
