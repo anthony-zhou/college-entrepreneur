@@ -27,13 +27,19 @@ class Money extends React.Component {
    * Pay off a debt.
    */
   pay(debt) {
-    if (this.props.balance >= debt.cost) {
-      this.props.debts.splice(this.props.debts.indexOf(debt), 1);
-      this.props.parent.setState({balance: this.props.balance - debt.cost});
+    console.log(this.props.balance);
+    if (this.props.balance >= debt.monthlyPayment) {
+      this.props.parent.setState({balance: this.props.balance - debt.monthlyPayment});
+      debt.cost -= debt.monthlyPayment;
+      if(debt.cost === 0) {
+        this.props.debts.splice(this.props.debts.indexOf(debt), 1);
+      }
       if (debt.year >= this.props.parent.state.year && debt.month >= this.props.parent.state.month) {
         console.log(debt.year + ' ' + debt.month + '/' + this.props.parent.state.year + ' ' + this.props.parent.state.month)
         this.props.parent.setState({score: this.props.score + 10});
       }
+    } else {
+      //TODO: implement alert telling user they don't have enough money to pay the debt
     }
   }
 
