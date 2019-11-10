@@ -1,5 +1,6 @@
 import React from 'react';
 import Event from './Event'
+<<<<<<< HEAD
 
 const eventItems = [
 					"PhoneMe Ultimate Extra OLED S Max",
@@ -15,6 +16,9 @@ const eventItems = [
 					"Saturn V Lego Set",
 					"amazing pikachonk plushie",
 				   ];
+=======
+const eventItems = ["PhoneMe Ultimate Extra OLED S Max", "SingingSam Galaxy Foldable", "Democratic Republic of Gamers 240hz Monitor", "Lazer LifeAdder Gaming Mouse", "Most Overpriced keyboard, the one and only HHKB keyboard", "very nice mug", "very nice fountain pen", "sketchy adapter", "avacado toast", "AlienWear Smart Laptop with Alexo Included", "Saturn V Lego Set", "amazing pikachonk plushie", "Bithub Backpack", "really expsensive cup of coffee", "book on how to code reactjs", "secret to the universe", "one banana", "love of your cat", "Planck 40% Ortholinear Keyboard", "Blueberry Pie, a great microcomputer", "advertisement spot for a popular UsTuber", "Bell XPS 13", "Boogle Pixel", "book on how to learn financial literacy", "philosopher's stone", "HAMY Safari Fountain Pen", "superpower to nap at anytime anywhere", "canned air", "bottled air", "best bud, a dog", "cute co-woker, a cat", "superpower of not getting coding errors", "LogicTech G305 Gaming Mouse", "Nintech Swap with HappyCons", "GameStation 4", "tickets to that one movie", "bundle or oranges", "very nice mechanical pencil", "MolaritySkin Notebook", "knockoff version of a Swiss watch", "limited edition cereal that disappointingly tastes the same", "overpriced printer ink", "bottle of coffee", "oolong milk tea with bubbles (or boba), no sugar, and no ice", "set of Minor League Hacking stickers", "kit for gel electrophoresis", "kit to make your own geodes", "premium currency for a free to play app", "branded tote bag", "fashionable fanny pack", "latest and greatest hoodie", "tenth shot of espresso of today", "guide on how to read kanji", "vitamin gummies", "new game, Live Stranding", "desk that can adjust its height", "batcave", "cure for unoriginality", "OakStory Orange Mushroom plushie", "OakStory Ghost Ship Exorcist Badge", "OakStory Rock Spirit plushie", "giant bean bag", "world's smallest violin", "book on How to Sruggle: Chopin Edition", "book on How to Struggle: Pagini Edition", "new Portable Monsters game: PortaMon Trebuchet"];
+>>>>>>> 96b74eada4fc9b26e27d98f9f89236d6e543c7a6
 
 class RandomEvent {
 	constructor(){
@@ -39,7 +43,11 @@ class RandomEvent {
 		if(randomIndex == eventItems.length){
 			randomIndex -= 1;
 		}
+<<<<<<< HEAD
 		return "You want to purchase the " + eventItems[randomIndex] + " for $" + this.cost + "?";
+=======
+		return "You want to purchase the " + eventItems[randomIndex] + " and it will cost $" + this.cost;
+>>>>>>> 96b74eada4fc9b26e27d98f9f89236d6e543c7a6
 	}
 
 	static pullValue(){

@@ -7,6 +7,7 @@ import Student from './Student.js';
 import World from './World.js';
 import Debt from './Debt.js';
 import LongTermDebt from './LongTermDebt.js';
+import Intro from './Intro.js';
 import { generateKeyPairSync } from 'crypto';
 
 const APR = 1.01;
@@ -43,10 +44,12 @@ class App extends React.Component {
       if (this.state.year * 12 + this.state.month >= debt.year * 12 + debt.month) {
         // Compound interest
         debt.cost *= APR;
-        // Subtract credit
-        this.setState({score: this.state.score - 10});
+
         if(LongTermDebt.prototype.isPrototypeOf(debt)) {
           debt.monthlyPayment = ((APR-1) * debt.cost) / (1 - Math.pow(APR, -12));
+        } else {
+          // Subtract credit
+          this.setState({score: this.state.score - 10});
         }
       }
     });
@@ -83,6 +86,7 @@ class App extends React.Component {
   render() {
     return (
       <div id="content">
+        <Intro></Intro>
         <Student health={this.state.health}/>
         <Money parent={this} income={this.state.income} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
         <World />

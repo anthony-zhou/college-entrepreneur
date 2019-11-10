@@ -30,7 +30,6 @@ class Money extends React.Component {
    * Pay off a debt.
    */
   pay(debt) {
-    console.log(this.props.balance);
     if (this.props.balance >= debt.monthlyPayment) {
       this.props.parent.setState({balance: this.props.balance - debt.monthlyPayment});
       debt.cost -= debt.monthlyPayment;
