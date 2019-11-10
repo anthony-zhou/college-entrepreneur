@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "46fe220ad7567ee975e633fad9a2d832",
+    "revision": "8fb5661db7c564552f109847816ba39c",
     "url": "/college-entrepreneur/index.html"
   },
   {
-    "revision": "0f3eed51a054e9104789",
+    "revision": "2d255c464b6d424406cc",
     "url": "/college-entrepreneur/static/css/main.1359359f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/college-entrepreneur/static/js/2.8c5ed23b.chunk.js"
   },
   {
-    "revision": "0f3eed51a054e9104789",
-    "url": "/college-entrepreneur/static/js/main.569feef7.chunk.js"
+    "revision": "2d255c464b6d424406cc",
+    "url": "/college-entrepreneur/static/js/main.d2532915.chunk.js"
   },
   {
     "revision": "52907458303805fe275f",

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/college-entrepreneur/static/css/main.1359359f.chunk.css",
-    "main.js": "/college-entrepreneur/static/js/main.569feef7.chunk.js",
-    "main.js.map": "/college-entrepreneur/static/js/main.569feef7.chunk.js.map",
+    "main.js": "/college-entrepreneur/static/js/main.d2532915.chunk.js",
+    "main.js.map": "/college-entrepreneur/static/js/main.d2532915.chunk.js.map",
     "runtime-main.js": "/college-entrepreneur/static/js/runtime-main.8bc3fb85.js",
     "runtime-main.js.map": "/college-entrepreneur/static/js/runtime-main.8bc3fb85.js.map",
     "static/js/2.8c5ed23b.chunk.js": "/college-entrepreneur/static/js/2.8c5ed23b.chunk.js",
     "static/js/2.8c5ed23b.chunk.js.map": "/college-entrepreneur/static/js/2.8c5ed23b.chunk.js.map",
     "index.html": "/college-entrepreneur/index.html",
-    "precache-manifest.b8aaddd9cf958be59b912bd0b77b9d35.js": "/college-entrepreneur/precache-manifest.b8aaddd9cf958be59b912bd0b77b9d35.js",
+    "precache-manifest.b5a2504e65cfc68ed46c2102c5cb6523.js": "/college-entrepreneur/precache-manifest.b5a2504e65cfc68ed46c2102c5cb6523.js",
     "service-worker.js": "/college-entrepreneur/service-worker.js",
     "static/css/main.1359359f.chunk.css.map": "/college-entrepreneur/static/css/main.1359359f.chunk.css.map",
     "static/media/logo.svg": "/college-entrepreneur/static/media/logo.25bf045c.svg"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8bc3fb85.js",
     "static/js/2.8c5ed23b.chunk.js",
     "static/css/main.1359359f.chunk.css",
-    "static/js/main.569feef7.chunk.js"
+    "static/js/main.d2532915.chunk.js"
   ]
 }

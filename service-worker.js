@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/college-entrepreneur/precache-manifest.b8aaddd9cf958be59b912bd0b77b9d35.js"
+  "/college-entrepreneur/precache-manifest.b5a2504e65cfc68ed46c2102c5cb6523.js"
 );
 
 self.addEventListener('message', (event) => {
