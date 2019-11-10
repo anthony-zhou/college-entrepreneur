@@ -54,9 +54,9 @@ class App extends React.Component {
       }
     });
     // Update health
-    this.setState({health: this.state.health - 5});
+    this.setState({health: this.state.health - 10});
 
-    if(this.state.score < 350 || this.state.health <= 0) {
+    if(this.state.score < 400 || this.state.health <= 0) {
       Intro.lose();
     }
     if(this.state.balance > 50000) {
@@ -97,7 +97,7 @@ class App extends React.Component {
         <Intro></Intro>
         <Student health={this.state.health}/>
         <Money parent={this} income={this.state.income} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
-        <World />
+        <World parent={this}/>
         <div id="buttons">
           <button onClick={() => this.advance()} type="button" className="btn btn-info">Next Month</button>
             &nbsp;&nbsp;

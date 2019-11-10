@@ -3,8 +3,14 @@ import './World.css';
 import RandomEvent from './RandomEvent';
 
 class World extends React.Component {
-  constructor(props) {
-    super(props);
+  /**
+   * Buy an item, increasing happiness.
+   */
+  buy(e) {
+    if (this.props.parent.state.balance >= e.cost) {
+      this.props.parent.setState({health: this.props.parent.state.health + 1});
+      this.props.parent.setState({balance: this.props.parent.state.balance - e.cost});
+    }
   }
 
   render() {
@@ -17,7 +23,7 @@ class World extends React.Component {
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-primary btn-danger" data-dismiss="modal">No</button>
-            <button type="button" className="btn btn-primary btn-success">Yes</button>
+            <button onClick={() => this.buy(e)} type="button" className="btn btn-primary btn-success">Yes</button>
         </div>
       </div>
     </div>
