@@ -7,19 +7,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import logo from './logo.svg';
 import './App.css';
 import Student from "./Student";
+import World from "./World";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(12, 1fr)',
-    gridGap: theme.spacing(3),
+    gridGap: theme.spacing(3)
   },
   paper: {
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
-    whiteSpace: 'nowrap',
     marginBottom: theme.spacing(1),
+    height: 140,
+    width: 100
   },
   divider: {
     margin: theme.spacing(2, 0),
@@ -29,11 +29,12 @@ const useStyles = makeStyles(theme => ({
 function App() {
   const classes = useStyles();
   const student = new Student();
+  const world = new World();
   return (
     <div className="App">
       <div>
-        <Grid>
-          <Grid item sm={5}>
+        <Grid class="container">
+          <Grid item xs={3}>
             <Paper className={classes.paper}>Credit Score: {student.creditScore}</Paper>
           </Grid>
           <Grid item xs={3}>
