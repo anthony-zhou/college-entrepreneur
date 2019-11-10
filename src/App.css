@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
