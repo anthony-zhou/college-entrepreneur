@@ -29,11 +29,11 @@ class Intro extends React.Component {
         </div>
         <div id="lose" className = "fullscreen hidden">
           <h1>You lost!</h1>
-          <p>Thanks for playing the game. We hoped you learned a lot. Please take this <a target="_blank" href="https://www.surveymonkey.com/r/LP2FLTR">post-game survey</a> to help us promote financial literacy. Then, <a href="/">play again!</a></p>
+          <p>Thanks for playing the game. We hoped you learned a lot. Please take this <a target="_blank" href="https://www.surveymonkey.com/r/LP2FLTR">post-game survey</a> to help us promote financial literacy. Then, <a href="/college-entrepreneur">play again!</a></p>
         </div>
         <div id="win" className = "fullscreen hidden">
           <h1>You won!</h1>
-          <p>Congrats on your awesome money-management skills! Please take this <a target="_blank" href="https://www.surveymonkey.com/r/LP2FLTR">post-game survey</a> to help us promote financial literacy. Then, <a href="/">play again!</a></p>
+          <p>Congrats on your awesome money-management skills! Please take this <a target="_blank" href="https://www.surveymonkey.com/r/LP2FLTR">post-game survey</a> to help us promote financial literacy. Then, <a href="/college-entrepreneur">play again!</a></p>
         </div>
       </div>
     );
