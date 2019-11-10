@@ -10,7 +10,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     var today = new Date();
-    this.state = {month: today.getMonth(), year: today.getFullYear()};
+    this.state = {balance: 0, income: 1000, score: 500,
+                  month: today.getMonth(), year: today.getFullYear(),
+                  health: 100};
   }
 
   /**
@@ -18,14 +20,18 @@ class App extends React.Component {
    */
   advance() {
     // Update internal time state
-    this.state.month++;
-    if (this.state.month == 12) {
-      this.state.month = 0;
-      this.state.year++;
+    var month = this.state.month + 1;
+    var year = this.state.year;
+    if (month === 12) {
+      month = 0;
+      year++;
     }
-    this.setState({month: this.state.month, year: this.state.year});
-    // TODO: Update money
-    // TODO: Update health
+    this.setState({month: month, year: year});
+    // Update money and credit
+    var income = Math.sqrt(this.state.health / 100.0) * this.state.income;
+    this.setState({balance: this.state.balance + income});
+    // Update health
+    this.setState({health: this.state.health - 5});
   }
 
   date() {
@@ -36,8 +42,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Student />
-        <Money date={this.date()}/>
+        <Student health={this.state.health}/>
+        <Money balance={this.state.balance} score={this.state.score} date={this.date()}/>
         <World />
         <button onClick={() => this.advance()} type="button" className="btn btn-info">Next</button>
       </div>
