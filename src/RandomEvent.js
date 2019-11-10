@@ -27,7 +27,7 @@ class RandomEvent {
 		if(randomIndex == eventItems.length){
 			randomIndex -= 1;
 		}
-		return "You want to purchase the " + eventItems[randomIndex] + " and it will cost $" + this.cost;
+		return "You want to purchase the " + eventItems[randomIndex] + " for $" + this.cost + '?';
 	}
 
 	static pullValue(){

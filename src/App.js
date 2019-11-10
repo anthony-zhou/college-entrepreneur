@@ -91,7 +91,7 @@ class App extends React.Component {
         <Money parent={this} income={this.state.income} balance={this.state.balance} score={this.state.score} date={this.date()} debts={this.state.debts}/>
         <World />
         <div id="buttons">
-          <button onClick={() => this.advance()} type="button" className="btn btn-info">Next</button>
+          <button onClick={() => this.advance()} type="button" className="btn btn-info">Next Month</button>
             &nbsp;&nbsp;
           <button onClick={() => this.invest()} type="button" className="btn btn-info">Invest (${this.state.income * 10})</button>
         </div>
