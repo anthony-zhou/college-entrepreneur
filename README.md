@@ -1,4 +1,4 @@
-# Fun with Finance: The Game
+# You are not a loan: The Game
 ### Have you ever thought about starting the next Google, Apple or Facebook?
 
 See if you have what it takes to balance your personal finances with your startup using this game.
